@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>{% block title %} {% endblock %}</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="{% static 'bootstrap-5.3.0/css/bootstrap.min.css' %}">
+            <script src="{% static 'bootstrap-5.3.0/js/bootstrap.bundle.min.js' %}"></script>
+        </head>
+        <body>
+            <div id="header" class="container-fluid bg-success text-white p-5">
+                <img class="float-start" src="{% static 'images/nstu-logo.png' %}" height="100px" />
+                <h1 class="text-center mt-4">Noakhali Science and Technology University</h1>
+            </div>
+            {% include 'navbar.html' %}
+            {% block content %} {% endblock %}
+            <div id="footer" class="container-fluid bg-primary text-white text-center">Footer Section</div>
+        </body>
+    </html>
+</html>
